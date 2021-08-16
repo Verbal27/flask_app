@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}" >
+</head>
+<body>
+    <form action="/process" method="post">
+        <label for="author">Author</label>
+        <input type="text" id="author" name="author">
+        <label for="comment">Comment</label>
+        <textarea id="comment" rows="6" name="comment" placeholder="comment here"></textarea>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+    </form>
+</body>
+</html>

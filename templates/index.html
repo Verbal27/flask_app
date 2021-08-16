@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}" >
+</head>
+<body>
+<!--<h1>Hello</h1>-->
+<!--{% if x %}-->
+<!--<h2>{{x}}</h2>-->
+<!--{% else %}-->
+<!--<h2>No text</h2>-->
+<!--{% endif%}-->
+<!--<ul>-->
+<!--    {% for y in y %}-->
+<!--    <li>{{y}}</li>-->
+<!--    {% endfor %}-->
+<!--</ul>-->
+<a class="btn btn-primary" href="{{ url_for('main') }}">Add a quote</a>{% for r in res %}
+<h1>{{ r.author }}</h1>
+<p>{{ r.comment }}</p>
+{% endfor %}
+</body>
+</html>
